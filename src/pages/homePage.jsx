@@ -24,7 +24,7 @@ export default function HomePage() {
         </>
       ) : (
         <>
-          <p>You are now Signed In as: </p>
+          <p>You are Signed In as: </p>
           <h1>User Name</h1>
           <button onClick={() => setSignOut(!signOut)}>Sign Out</button>
         </>

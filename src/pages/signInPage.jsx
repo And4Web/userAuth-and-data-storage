@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
+import { signInWithPopUp } from "../firebase/config";
 
 class SignInPage extends Component {
   constructor() {
@@ -42,16 +43,10 @@ class SignInPage extends Component {
             placeholder="Your Password"
             onChange={this.handleChange}
           />
-          <button>
-            <Link to="/sign-in">Sign in with Email</Link>
-          </button>
+          <button>Sign in with Email</button>
         </form>
-        <button>
-          <Link to="/sign-in">Sign in with Google</Link>
-        </button>
-        <button>
-          <Link to="/sign-in">Sign in with Facebook</Link>
-        </button>
+        <button onClick={signInWithPopUp}>Sign in with Google</button>
+        <button>Sign in with Facebook</button>
       </>
     );
   }
